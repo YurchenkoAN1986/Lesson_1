@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Lesson1 {
 
@@ -29,7 +29,7 @@ public static void printColor(){
 
     if (value <= 0){
         System.out.println("Красный");
-    } else if (value >=0 && value <= 100){
+    } else if (value >0 && value <= 100){
         System.out.println("Желтый");
     } else {
         System.out.println("Зеленый");
@@ -54,26 +54,20 @@ public static boolean checkSum(int a, int b){
 }
 
 public static void checkNumbers(){
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Введите число: ");
-    int number = scanner.nextInt();
+
+    int number = -5;
 
     if(number >= 0) {
         System.out.println("Число положительное");
     } else {
-        System.out.print("Число отрицательное");
+        System.out.println("Число отрицательное");
     }
 }
 
 
 public static boolean isNonNegative() {
-    int number1 = 10;
-    int number2 = -5;
-
-    System.out.println("Число " + number1 + " больше или равно нулю: " + (number1 >= 0));
-    System.out.println("Число " + number2 + " больше или равно нулю: " + (number2 >= 0));
-
-    return number1 >= 0;
+    int number = 10;
+    return number >= 0;
 }
 
 public static void printString(String str, int count){
@@ -112,7 +106,15 @@ public static int[] swapElements() {
     return arr;
 }
 
+public static int[] fillArray() {
+    int[] arr = new int[101];
 
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] = i;
+    }
+
+    return arr;
+}
 public static void main(String[] args) {
     PrintThreeWords();
     checkSumSign();
@@ -124,6 +126,12 @@ public static void main(String[] args) {
     printString("Hello World", 3);
     System.out.println("2024 is a leap year: " + checkLeapYear(2024));
     for (int num : swapElements()) {
+        System.out.print(num + " ");
+    }
+
+    System.out.println();
+
+    for (int num : fillArray()) {
         System.out.print(num + " ");
     }
 }
