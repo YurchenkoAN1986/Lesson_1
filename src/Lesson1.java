@@ -1,5 +1,3 @@
-//import java.util.Scanner;
-
 public class Lesson1 {
 
     public static void PrintThreeWords() {
@@ -7,10 +5,6 @@ public class Lesson1 {
         System.out.println("banana");
         System.out.println("apple");
     }
-
-/*public static void main(String[] args) {
-            PrintThreeWords();
-        }*/
 
     public static void checkSumSign() {
         int a = 10;
